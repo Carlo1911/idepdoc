@@ -1,0 +1,15 @@
+mysqlclient
+django-htmlmin
+django-import-export
+django-model-utils
+django
+matplotlib
+numpy
+pillow
+django-translation-manager
+nltk
+requests
+xlsxwriter
+django-dotenv
+html5lib
+django-extensions
