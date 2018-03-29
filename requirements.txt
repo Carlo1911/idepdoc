@@ -13,3 +13,4 @@ xlsxwriter
 django-dotenv
 html5lib
 django-extensions
+pdfkit

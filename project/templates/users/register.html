@@ -1,0 +1,57 @@
+{% extends 'base_usuario.html' %}
+{% load static %}
+
+{% block contenido %}
+<div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel">
+        <form class="login-form" name="form-control" id="form-control" role="form" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <h4>Registro</h4>
+                    <p class="center">Únete al equipo!</p>
+                </div>
+            </div>
+            <div class="row margin">
+              <div class="input-field col s6">
+                {% include 'partials/form_input.html' with field=usuario.nombres %}
+              </div>
+                <div class="input-field col s6">
+                    {% include 'partials/form_select.html' with field=usuario.tipo_usuario %}
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s6">
+                    {% include 'partials/form_input.html' with field=usuario.apellido_paterno %}
+                </div>
+                <div class="input-field col s6">
+                    {% include 'partials/form_input.html' with field=usuario.apellido_materno %}
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                {% include 'partials/form_select.html' with field=usuario.email %}
+                </div>
+            </div>
+            <div class="row margin">
+              <div class="input-field col s6">
+                    {% include 'partials/form_input.html' with field=usuario.password1 %}
+              </div>
+              <div class="input-field col s6">
+                    {% include 'partials/form_input.html' with field=usuario.password2 %}
+              </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn waves-effect waves-light col s12" data-color="blue" data-style="contract-overlay">
+                    <span class="ladda-label">Registrar</span>
+                </button>
+                <div class="input-field col s12">
+                    <p class="margin center medium-small sign-up">Already have an account?
+                        <a href="{% url 'users:usuario_login' %}">Login</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

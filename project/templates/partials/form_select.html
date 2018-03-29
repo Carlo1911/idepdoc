@@ -1,0 +1,6 @@
+{{ field }}
+<label for="{{ field.auto_id }}" class="center-align">{% if field.field.required %}* {% endif %}{{ field.label }}</label>
+{% for error in field.errors %}
+    <div class="alert alert-danger">{{ error }}</div>
+{% endfor %}
+

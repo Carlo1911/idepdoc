@@ -23,9 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ul+ld75bv+vppu1(fbt9)=nu3#fj@s8gfys%r^(pa5il8v8bo+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG',True)
 
-ALLOWED_HOSTS = []
+# Configuración adicional
+ALLOWED_HOSTS = ['*', 'localhost']
+AUTH_USER_MODEL = 'users.User'
+LOGIN_URL = 'users:usuario_login'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -39,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'project.documents',
+    'project.dashboard',
+    'project.users'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +62,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "project/templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

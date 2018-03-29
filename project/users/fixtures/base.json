@@ -1,0 +1,17 @@
+[
+    {
+    "pk": 1, 
+    "model": "users.User", 
+    "fields": {
+        "email": "carlo.alva@pucp.pe",
+        "nombres": "Carlo André", 
+        "apellido_paterno": "Alva", 
+        "apellido_materno": "Cohello",
+        "es_activo": "True",
+        "tipo_usuario": "admin",
+        "avatar" : "",
+        "is_staff" : "True",
+        "password" : "pbkdf2_sha256$36000$cQFSZWWewoSk$kNYXtWdker73Zf62qn5bP81F+XbE4Jxv3HG01MJgoh8="
+        }
+    }
+]

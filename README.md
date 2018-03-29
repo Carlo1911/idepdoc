@@ -23,13 +23,27 @@ sudo -H pip3 install virtualenv
 
 -Instalar dependencias con el entorno activado: `pip3 install -r requirements.txt`
 
+### Creación de BD
+
+Acceder a mysql y ejecutar los comandos para la creación de la BD
+```
+mysql -u root -p
+
+CREATE DATABASE docDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE USER 'doc_user'@'localhost' IDENTIFIED BY 'doc_password';
+GRANT ALL PRIVILEGES ON docDB.* TO 'doc_user'@'localhost';
+FLUSH PRIVILEGES;
+quit
+
+```
+
 ### Configuración extra
 
 Una vez descargado el repositorio y dentro de este crear el archivo .env
 ```sh
 touch .env
 ```
-Copiar directamente de aquí o del archivo .env_copy
+Copiar directamente de aquí o del archivo .env_copy dentro del proyecto
 
 ```sh
 DB_NAME="docDB"
