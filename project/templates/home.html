@@ -1,92 +1,142 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block css %}
-{% endblock %}
-{% block contenido %}
+{% extends 'base.html' %} {% load static %} {% block css %} {% endblock %} {% block contenido %}
 <section id="content">
-   <!--breadcrumbs start-->
-   <div id="breadcrumbs-wrapper">
+    <!--breadcrumbs start-->
+    <div id="breadcrumbs-wrapper">
         <!-- Search for small screen -->
         <div class="header-search-wrapper grey lighten-2 hide-on-large-only">
-          <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
+            <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
         </div>
         <div class="container">
-          <div class="row">
-            <div class="col s10 m6 l6">
-              <h5 class="breadcrumbs-title">Models</h5>
-              <ol class="breadcrumbs">
-                <li><a href="#">Documents</a>
-                </li>
-                <li class="active"><a href="#">UI Elements</a>
-                </li>
-                
-              </ol>
-            </div>
-            <div class="col s2 m6 l6">
-              <a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="#!" data-activates="dropdown1">
-                <i class="material-icons hide-on-med-and-up">settings</i>
-                <span class="hide-on-small-onl">Settings</span>
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
-              <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!" class="grey-text text-darken-2">Access<span class="badge">1</span></a>
-                </li>
-                <li><a href="#!" class="grey-text text-darken-2">Profile<span class="new badge">2</span></a>
-                </li>
-                <li><a href="#!" class="grey-text text-darken-2">Notifications</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--breadcrumbs end-->
-   <!--start container-->
-   <div class="container">
-       <!--Horizontal Advanced Card-->
-       <div id="basic-card" class="section">
             <div class="row">
-              <div class="col s12">
-                <div class="row">
-                  <div class="col s12">
-                    <div class="card horizontal">
-                      <div class="card-image width-65">
-                        <img src="{% static 'images/gallary/21.png' %}">
-                      </div>
-                      <div class="card-stacked">
-                        <div class="card-content">
-                          <h5>Cotización</h5>
-                          <p>Modelo simple para una cotización
-                          </p>
-                        </div>
-                        <div class="card-action border-none">
-                            <button data-target="modal1" class="btn modal-trigger">Generar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col s10 m6 l6">
+                    <h5 class="breadcrumbs-title">Models</h5>
+                    <ol class="breadcrumbs">
+                        <li>
+                            <a href="#">Documents</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">UI Elements</a>
+                        </li>
+
+                    </ol>
                 </div>
-              </div>
+                <div class="col s2 m6 l6">
+                    <a class="btn dropdown-settings waves-effect waves-light breadcrumbs-btn right" href="#!" data-activates="dropdown1">
+                        <i class="material-icons hide-on-med-and-up">settings</i>
+                        <span class="hide-on-small-onl">Settings</span>
+                        <i class="material-icons right">arrow_drop_down</i>
+                    </a>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li>
+                            <a href="#!" class="grey-text text-darken-2">Access
+                                <span class="badge">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="grey-text text-darken-2">Profile
+                                <span class="new badge">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="grey-text text-darken-2">Notifications</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--breadcrumbs end-->
+    <!--start container-->
+    <div class="container">
+        <!--Horizontal Advanced Card-->
+        <div id="basic-card" class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card horizontal">
+                                <div class="card-image width-65">
+                                    <img src="{% static 'images/gallary/21.png' %}">
+                                </div>
+                                <div class="card-stacked">
+                                    <div class="card-content">
+                                        <h5>Cotización</h5>
+                                        <p>Modelo simple para una cotización
+                                        </p>
+                                    </div>
+                                    <div class="card-action border-none">
+                                        <button data-target="modal1" class="btn modal-trigger">Generar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Modal 1 -->
         <div id="modal1" class="modal modal-fixed-footer">
+            <form class="col s12">
                 <div class="modal-content">
-                  <h4>Cotización</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <div class="row">
+                        <form action="{% url 'home' %}" method="POST" id="post-form">
+                            {% csrf_token %}
+                            <h4>Cotización</h4>
+                            <p>Solicitud de cotización: {% include 'partials/form_input.html' with field=form.date %}
+                            </p>
+                            <br>
+                            <p>Datos personales:</p>
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        {% include 'partials/form_input.html' with field=form.name %}
+                                    </div>
+                                    <div class="input-field col s6">
+                                        {% include 'partials/form_input.html' with field=form.last_name %}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        {% include 'partials/form_input.html' with field=form.occupation %}
+                                    </div>
+                                    <div class="input-field col s2">
+                                        {% include 'partials/form_input.html' with field=form.age %}
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Solicito una cotización del precio del producto
+                                <b>XYZ</b> en un volumen de
+                                <b>1000</b> unidades con fines de reventa, me gustaria ser distribuidor de su producto en la
+                                zona de
+                                <b>Sullorqui</b>.
+                            </p>
+
+                            <div class="input-field col s2">
+                                {% include 'partials/form_input.html' with field=form.product %}
+                            </div>
+                            <div class="input-field col s2">
+                                {% include 'partials/form_input.html' with field=form.units %}
+                            </div>
+                            <div class="input-field col s2">
+                                {% include 'partials/form_input.html' with field=form.zone %}
+                            </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                  <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Disagree</a>
-                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">Cancel</a>
+                    <button id="cotizacion_btn" class="modal-action modal-close waves-effect waves-green btn-flat" type="submit">Generar
+                        <i class="material-icons right">send</i>
+                    </button>
                 </div>
-              </div>
-   </div>
-   <!--end container-->
+                </form>
+        </div>
+    </div>
+    <!--end container-->
 </section>
-{% endblock %}
-{% block javascript %}
+{% endblock %} {% block javascript %}
+<script type="text/javascript">
+    var url_home = "{% url 'home' %}"
+</script>
 {% endblock %}
